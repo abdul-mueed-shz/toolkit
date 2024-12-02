@@ -20,7 +20,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * Gets or Sets SortByUpdatedOn
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-12-03T00:57:39.970420+05:00[Asia/Karachi]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-12-03T01:31:24.398359+05:00[Asia/Karachi]")
 public enum SortByUpdatedOn {
   
   UPDATEDON("updatedOn");

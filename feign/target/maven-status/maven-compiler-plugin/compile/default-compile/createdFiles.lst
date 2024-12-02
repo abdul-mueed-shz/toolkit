@@ -5,6 +5,7 @@ com/abdul/admin/dto/LinkedinUserResponse.class
 com/abdul/admin/dto/PermissionInfo.class
 com/abdul/admin/dto/Oauth2LoginRequest.class
 com/abdul/toolkit/adapter/out/web/LinkedinUserInfoFeignClient.class
+com/abdul/toolkit/adapter/out/web/UserFeignClient.class
 com/abdul/toolkit/adapter/out/web/LinkedinAuthFeignClient.class
 com/abdul/admin/dto/UserResponse.class
 com/abdul/admin/dto/Oauth2LoginResponse.class
