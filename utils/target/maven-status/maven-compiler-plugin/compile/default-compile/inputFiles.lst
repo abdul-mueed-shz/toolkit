@@ -1,6 +1,12 @@
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/auth/model/AccessToken.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/linkedin/port/in/LinkedinApiUseCase.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/linkedin/usecase/LinkedinApiUseCaseImpl.java
+/Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/google/model/GoogleUserInfo.java
+/Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/user/model/RoleInfo.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/linkedin/mapper/LinkedinMapper.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/linkedin/model/LinkedinUserResponse.java
+/Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/github/model/GithubUserInfo.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/UtilsApp.java
+/Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/twitter/model/TwitterUserInfo.java
+/Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/linkedin/model/LinkedinUserInfo.java
+/Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/utils/src/main/java/com/abdul/toolkit/domain/user/model/PermissionInfo.java

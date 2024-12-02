@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
  * Toolkit Security!
  */
 @Configuration
-@ComponentScan(basePackages = "com.abdul.toolkit") // For service classes
+@ComponentScan(basePackages = "com.abdul.toolkit.domain.auth") // Limit scanning to the security package
 public class SecurityApp {
 
     // Add any shared beans or configurations if needed
