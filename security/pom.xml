@@ -65,6 +65,12 @@
       <artifactId>jjwt-jackson</artifactId>
       <version>0.12.6</version>
     </dependency>
+    <dependency>
+      <groupId>com.abdul.toolkit</groupId>
+      <artifactId>utils</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
 
   </dependencies>
 

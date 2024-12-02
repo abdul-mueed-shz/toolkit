@@ -4,7 +4,7 @@ import com.abdul.admin.dto.GithubUserInfo;
 import com.abdul.admin.dto.GoogleUserInfo;
 import com.abdul.admin.dto.PermissionInfo;
 import com.abdul.admin.dto.TwitterUserInfo;
-import com.abdul.admin.dto.UserResponse;
+import com.abdul.admin.dto.UserDetailResponse;
 import com.abdul.toolkit.utils.linkedin.model.LinkedinUserInfo;
 import com.abdul.toolkit.utils.user.model.RoleInfo;
 import com.abdul.toolkit.utils.user.model.UserInfo;
@@ -17,14 +17,14 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-12-03T01:52:33+0500",
+    date = "2024-12-03T02:24:49+0500",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.11 (Amazon.com Inc.)"
 )
 @Component
 public class UserServiceMapperImpl implements UserServiceMapper {
 
     @Override
-    public UserInfo toUserInfo(UserResponse userResponse) {
+    public UserInfo toUserInfo(UserDetailResponse userResponse) {
         if ( userResponse == null ) {
             return null;
         }
@@ -47,6 +47,7 @@ public class UserServiceMapperImpl implements UserServiceMapper {
         userInfo.linkedinUser( linkedinUserInfoToLinkedinUserInfo( userResponse.getLinkedinUser() ) );
         userInfo.twitterUser( twitterUserInfoToTwitterUserInfo( userResponse.getTwitterUser() ) );
         userInfo.githubUser( githubUserInfoToGithubUserInfo( userResponse.getGithubUser() ) );
+        userInfo.password( userResponse.getPassword() );
 
         return userInfo.build();
     }

@@ -180,7 +180,7 @@ components:
       enum:
         - updatedOn
 
-    UserResponse:
+    UserInfoBase:
       type: object
       properties:
         id:
@@ -204,19 +204,6 @@ components:
         email:
           type: string
           description: Email address of the user
-        googleUser:
-          $ref: "#/components/schemas/GoogleUserInfo"
-        linkedinUser:
-          $ref: "#/components/schemas/LinkedinUserInfo"
-        twitterUser:
-          $ref: "#/components/schemas/TwitterUserInfo"
-        githubUser:
-          $ref: "#/components/schemas/GithubUserInfo"
-        roles:
-          type: array
-          items:
-            $ref: '#/components/schemas/RoleInfo'
-          description: Set of roles assigned to the user
         createdAt:
           type: string
           format: date-time
@@ -234,6 +221,34 @@ components:
         areCredentialsValid:
           type: boolean
           description: Indicates whether the user's credentials are valid
+        googleUser:
+          $ref: "#/components/schemas/GoogleUserInfo"
+        linkedinUser:
+          $ref: "#/components/schemas/LinkedinUserInfo"
+        twitterUser:
+          $ref: "#/components/schemas/TwitterUserInfo"
+        githubUser:
+          $ref: "#/components/schemas/GithubUserInfo"
+        roles:
+          type: array
+          items:
+            $ref: '#/components/schemas/RoleInfo'
+          description: Set of roles assigned to the user
+      required:
+        - id
+        - firstName
+        - lastName
+        - email
+        - createdAt
+        - updatedAt
+        - isActive
+        - isSystemLock
+        - areCredentialsValid
+
+    UserResponse:
+      allOf:
+        - $ref: "#/components/schemas/UserInfoBase"
+
 
     RoleInfo:
       type: object
@@ -444,3 +459,11 @@ components:
           type: string
         refreshToken:
           type: string
+
+    UserDetailResponse:
+      allOf:
+        - $ref: "#/components/schemas/UserInfoBase"
+        - type: object
+          properties:
+            password:
+              type: string

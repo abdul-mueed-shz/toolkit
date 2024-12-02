@@ -25,11 +25,11 @@ import java.util.*;
 import jakarta.annotation.Generated;
 
 /**
- * UserResponse
+ * UserInfoBase
  */
 
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-12-03T02:23:02.771685+05:00[Asia/Karachi]")
-public class UserResponse {
+public class UserInfoBase {
 
   private Long id;
 
@@ -66,14 +66,14 @@ public class UserResponse {
   @Valid
   private List<@Valid RoleInfo> roles;
 
-  public UserResponse() {
+  public UserInfoBase() {
     super();
   }
 
   /**
    * Constructor with only required parameters
    */
-  public UserResponse(Long id, String firstName, String lastName, String email, OffsetDateTime createdAt, OffsetDateTime updatedAt, Boolean isActive, Boolean isSystemLock, Boolean areCredentialsValid) {
+  public UserInfoBase(Long id, String firstName, String lastName, String email, OffsetDateTime createdAt, OffsetDateTime updatedAt, Boolean isActive, Boolean isSystemLock, Boolean areCredentialsValid) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
@@ -85,7 +85,7 @@ public class UserResponse {
     this.areCredentialsValid = areCredentialsValid;
   }
 
-  public UserResponse id(Long id) {
+  public UserInfoBase id(Long id) {
     this.id = id;
     return this;
   }
@@ -105,7 +105,7 @@ public class UserResponse {
     this.id = id;
   }
 
-  public UserResponse firstName(String firstName) {
+  public UserInfoBase firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
@@ -125,7 +125,7 @@ public class UserResponse {
     this.firstName = firstName;
   }
 
-  public UserResponse lastName(String lastName) {
+  public UserInfoBase lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
@@ -145,7 +145,7 @@ public class UserResponse {
     this.lastName = lastName;
   }
 
-  public UserResponse emailVerified(Boolean emailVerified) {
+  public UserInfoBase emailVerified(Boolean emailVerified) {
     this.emailVerified = emailVerified;
     return this;
   }
@@ -165,7 +165,7 @@ public class UserResponse {
     this.emailVerified = emailVerified;
   }
 
-  public UserResponse username(String username) {
+  public UserInfoBase username(String username) {
     this.username = username;
     return this;
   }
@@ -185,7 +185,7 @@ public class UserResponse {
     this.username = username;
   }
 
-  public UserResponse email(String email) {
+  public UserInfoBase email(String email) {
     this.email = email;
     return this;
   }
@@ -205,7 +205,7 @@ public class UserResponse {
     this.email = email;
   }
 
-  public UserResponse createdAt(OffsetDateTime createdAt) {
+  public UserInfoBase createdAt(OffsetDateTime createdAt) {
     this.createdAt = createdAt;
     return this;
   }
@@ -225,7 +225,7 @@ public class UserResponse {
     this.createdAt = createdAt;
   }
 
-  public UserResponse updatedAt(OffsetDateTime updatedAt) {
+  public UserInfoBase updatedAt(OffsetDateTime updatedAt) {
     this.updatedAt = updatedAt;
     return this;
   }
@@ -245,7 +245,7 @@ public class UserResponse {
     this.updatedAt = updatedAt;
   }
 
-  public UserResponse isActive(Boolean isActive) {
+  public UserInfoBase isActive(Boolean isActive) {
     this.isActive = isActive;
     return this;
   }
@@ -265,7 +265,7 @@ public class UserResponse {
     this.isActive = isActive;
   }
 
-  public UserResponse isSystemLock(Boolean isSystemLock) {
+  public UserInfoBase isSystemLock(Boolean isSystemLock) {
     this.isSystemLock = isSystemLock;
     return this;
   }
@@ -285,7 +285,7 @@ public class UserResponse {
     this.isSystemLock = isSystemLock;
   }
 
-  public UserResponse areCredentialsValid(Boolean areCredentialsValid) {
+  public UserInfoBase areCredentialsValid(Boolean areCredentialsValid) {
     this.areCredentialsValid = areCredentialsValid;
     return this;
   }
@@ -305,7 +305,7 @@ public class UserResponse {
     this.areCredentialsValid = areCredentialsValid;
   }
 
-  public UserResponse googleUser(GoogleUserInfo googleUser) {
+  public UserInfoBase googleUser(GoogleUserInfo googleUser) {
     this.googleUser = googleUser;
     return this;
   }
@@ -325,7 +325,7 @@ public class UserResponse {
     this.googleUser = googleUser;
   }
 
-  public UserResponse linkedinUser(LinkedinUserInfo linkedinUser) {
+  public UserInfoBase linkedinUser(LinkedinUserInfo linkedinUser) {
     this.linkedinUser = linkedinUser;
     return this;
   }
@@ -345,7 +345,7 @@ public class UserResponse {
     this.linkedinUser = linkedinUser;
   }
 
-  public UserResponse twitterUser(TwitterUserInfo twitterUser) {
+  public UserInfoBase twitterUser(TwitterUserInfo twitterUser) {
     this.twitterUser = twitterUser;
     return this;
   }
@@ -365,7 +365,7 @@ public class UserResponse {
     this.twitterUser = twitterUser;
   }
 
-  public UserResponse githubUser(GithubUserInfo githubUser) {
+  public UserInfoBase githubUser(GithubUserInfo githubUser) {
     this.githubUser = githubUser;
     return this;
   }
@@ -385,12 +385,12 @@ public class UserResponse {
     this.githubUser = githubUser;
   }
 
-  public UserResponse roles(List<@Valid RoleInfo> roles) {
+  public UserInfoBase roles(List<@Valid RoleInfo> roles) {
     this.roles = roles;
     return this;
   }
 
-  public UserResponse addRolesItem(RoleInfo rolesItem) {
+  public UserInfoBase addRolesItem(RoleInfo rolesItem) {
     if (this.roles == null) {
       this.roles = new ArrayList<>();
     }
@@ -421,23 +421,23 @@ public class UserResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UserResponse userResponse = (UserResponse) o;
-    return Objects.equals(this.id, userResponse.id) &&
-        Objects.equals(this.firstName, userResponse.firstName) &&
-        Objects.equals(this.lastName, userResponse.lastName) &&
-        Objects.equals(this.emailVerified, userResponse.emailVerified) &&
-        Objects.equals(this.username, userResponse.username) &&
-        Objects.equals(this.email, userResponse.email) &&
-        Objects.equals(this.createdAt, userResponse.createdAt) &&
-        Objects.equals(this.updatedAt, userResponse.updatedAt) &&
-        Objects.equals(this.isActive, userResponse.isActive) &&
-        Objects.equals(this.isSystemLock, userResponse.isSystemLock) &&
-        Objects.equals(this.areCredentialsValid, userResponse.areCredentialsValid) &&
-        Objects.equals(this.googleUser, userResponse.googleUser) &&
-        Objects.equals(this.linkedinUser, userResponse.linkedinUser) &&
-        Objects.equals(this.twitterUser, userResponse.twitterUser) &&
-        Objects.equals(this.githubUser, userResponse.githubUser) &&
-        Objects.equals(this.roles, userResponse.roles);
+    UserInfoBase userInfoBase = (UserInfoBase) o;
+    return Objects.equals(this.id, userInfoBase.id) &&
+        Objects.equals(this.firstName, userInfoBase.firstName) &&
+        Objects.equals(this.lastName, userInfoBase.lastName) &&
+        Objects.equals(this.emailVerified, userInfoBase.emailVerified) &&
+        Objects.equals(this.username, userInfoBase.username) &&
+        Objects.equals(this.email, userInfoBase.email) &&
+        Objects.equals(this.createdAt, userInfoBase.createdAt) &&
+        Objects.equals(this.updatedAt, userInfoBase.updatedAt) &&
+        Objects.equals(this.isActive, userInfoBase.isActive) &&
+        Objects.equals(this.isSystemLock, userInfoBase.isSystemLock) &&
+        Objects.equals(this.areCredentialsValid, userInfoBase.areCredentialsValid) &&
+        Objects.equals(this.googleUser, userInfoBase.googleUser) &&
+        Objects.equals(this.linkedinUser, userInfoBase.linkedinUser) &&
+        Objects.equals(this.twitterUser, userInfoBase.twitterUser) &&
+        Objects.equals(this.githubUser, userInfoBase.githubUser) &&
+        Objects.equals(this.roles, userInfoBase.roles);
   }
 
   @Override
@@ -448,7 +448,7 @@ public class UserResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UserResponse {\n");
+    sb.append("class UserInfoBase {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    firstName: ").append(toIndentedString(firstName)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");

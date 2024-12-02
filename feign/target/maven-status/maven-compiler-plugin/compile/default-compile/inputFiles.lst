@@ -1,5 +1,6 @@
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/AuthenticationInfo.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/UserResponse.java
+/Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/UserInfoBase.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/SortDirection.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/src/main/java/com/abdul/toolkit/adapter/out/web/LinkedinAuthFeignClient.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/LinkedinUserInfo.java
@@ -12,6 +13,7 @@
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/SortBy.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/PermissionInfo.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/Oauth2LoginRequest.java
+/Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/UserDetailResponse.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/AccessToken.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/GoogleUserInfo.java
 /Users/ahmad/Documents/Projects/Springboot/ReuseableMicroservices/toolkit/feign/target/generated-sources/swagger/src/main/java/com/abdul/admin/dto/RoleInfo.java
