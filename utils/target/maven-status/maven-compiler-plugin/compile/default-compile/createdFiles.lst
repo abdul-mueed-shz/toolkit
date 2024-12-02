@@ -1,5 +1,5 @@
-com/abdul/toolkit/App.class
 com/abdul/toolkit/domain/linkedin/model/LinkedinUserResponse.class
+com/abdul/toolkit/UtilsApp.class
 com/abdul/toolkit/domain/linkedin/mapper/LinkedinMapperImpl.class
 com/abdul/toolkit/domain/linkedin/mapper/LinkedinMapper.class
 com/abdul/toolkit/domain/linkedin/port/in/LinkedinApiUseCase.class
