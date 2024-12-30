@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @EnableFeignClients
-@ComponentScan(basePackages = "com.abdul.toolkit") // For service classes
+@ComponentScan(basePackages = "com.abdul.toolkit.utils") // For service classes
 public class UtilsApp {
     // Add any shared beans or configurations if needed
 }

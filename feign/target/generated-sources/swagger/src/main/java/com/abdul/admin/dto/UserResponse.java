@@ -28,7 +28,7 @@ import jakarta.annotation.Generated;
  * UserResponse
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-12-03T00:34:10.288515+05:00[Asia/Karachi]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-12-31T03:12:11.389933+05:00[Asia/Karachi]")
 public class UserResponse {
 
   private Long id;
@@ -43,17 +43,6 @@ public class UserResponse {
 
   private String email;
 
-  private GoogleUserInfo googleUser;
-
-  private LinkedinUserInfo linkedinUser;
-
-  private TwitterUserInfo twitterUser;
-
-  private GithubUserInfo githubUser;
-
-  @Valid
-  private List<@Valid RoleInfo> roles;
-
   @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
   private OffsetDateTime createdAt;
 
@@ -66,6 +55,36 @@ public class UserResponse {
 
   private Boolean areCredentialsValid;
 
+  private GoogleUserInfo googleUser;
+
+  private LinkedinUserInfo linkedinUser;
+
+  private TwitterUserInfo twitterUser;
+
+  private GithubUserInfo githubUser;
+
+  @Valid
+  private List<@Valid RoleInfo> roles;
+
+  public UserResponse() {
+    super();
+  }
+
+  /**
+   * Constructor with only required parameters
+   */
+  public UserResponse(Long id, String firstName, String lastName, String email, OffsetDateTime createdAt, OffsetDateTime updatedAt, Boolean isActive, Boolean isSystemLock, Boolean areCredentialsValid) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.createdAt = createdAt;
+    this.updatedAt = updatedAt;
+    this.isActive = isActive;
+    this.isSystemLock = isSystemLock;
+    this.areCredentialsValid = areCredentialsValid;
+  }
+
   public UserResponse id(Long id) {
     this.id = id;
     return this;
@@ -75,8 +94,8 @@ public class UserResponse {
    * Unique identifier for the user
    * @return id
   */
-  
-  @Schema(name = "id", description = "Unique identifier for the user", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull 
+  @Schema(name = "id", description = "Unique identifier for the user", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("id")
   public Long getId() {
     return id;
@@ -95,8 +114,8 @@ public class UserResponse {
    * First name of the user
    * @return firstName
   */
-  @Size(min = 10) 
-  @Schema(name = "firstName", description = "First name of the user", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull @Size(min = 10) 
+  @Schema(name = "firstName", description = "First name of the user", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("firstName")
   public String getFirstName() {
     return firstName;
@@ -115,8 +134,8 @@ public class UserResponse {
    * Last name of the user
    * @return lastName
   */
-  @Size(min = 10) 
-  @Schema(name = "lastName", description = "Last name of the user", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull @Size(min = 10) 
+  @Schema(name = "lastName", description = "Last name of the user", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("lastName")
   public String getLastName() {
     return lastName;
@@ -175,8 +194,8 @@ public class UserResponse {
    * Email address of the user
    * @return email
   */
-  
-  @Schema(name = "email", description = "Email address of the user", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @NotNull 
+  @Schema(name = "email", description = "Email address of the user", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -184,6 +203,106 @@ public class UserResponse {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public UserResponse createdAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+    return this;
+  }
+
+  /**
+   * The date and time the user was created
+   * @return createdAt
+  */
+  @NotNull @Valid 
+  @Schema(name = "createdAt", description = "The date and time the user was created", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("createdAt")
+  public OffsetDateTime getCreatedAt() {
+    return createdAt;
+  }
+
+  public void setCreatedAt(OffsetDateTime createdAt) {
+    this.createdAt = createdAt;
+  }
+
+  public UserResponse updatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+    return this;
+  }
+
+  /**
+   * The date and time the user was last updated
+   * @return updatedAt
+  */
+  @NotNull @Valid 
+  @Schema(name = "updatedAt", description = "The date and time the user was last updated", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("updatedAt")
+  public OffsetDateTime getUpdatedAt() {
+    return updatedAt;
+  }
+
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
+    this.updatedAt = updatedAt;
+  }
+
+  public UserResponse isActive(Boolean isActive) {
+    this.isActive = isActive;
+    return this;
+  }
+
+  /**
+   * Indicates whether the user is active
+   * @return isActive
+  */
+  @NotNull 
+  @Schema(name = "isActive", description = "Indicates whether the user is active", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("isActive")
+  public Boolean getIsActive() {
+    return isActive;
+  }
+
+  public void setIsActive(Boolean isActive) {
+    this.isActive = isActive;
+  }
+
+  public UserResponse isSystemLock(Boolean isSystemLock) {
+    this.isSystemLock = isSystemLock;
+    return this;
+  }
+
+  /**
+   * Indicates whether the user's system lock is enabled
+   * @return isSystemLock
+  */
+  @NotNull 
+  @Schema(name = "isSystemLock", description = "Indicates whether the user's system lock is enabled", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("isSystemLock")
+  public Boolean getIsSystemLock() {
+    return isSystemLock;
+  }
+
+  public void setIsSystemLock(Boolean isSystemLock) {
+    this.isSystemLock = isSystemLock;
+  }
+
+  public UserResponse areCredentialsValid(Boolean areCredentialsValid) {
+    this.areCredentialsValid = areCredentialsValid;
+    return this;
+  }
+
+  /**
+   * Indicates whether the user's credentials are valid
+   * @return areCredentialsValid
+  */
+  @NotNull 
+  @Schema(name = "areCredentialsValid", description = "Indicates whether the user's credentials are valid", requiredMode = Schema.RequiredMode.REQUIRED)
+  @JsonProperty("areCredentialsValid")
+  public Boolean getAreCredentialsValid() {
+    return areCredentialsValid;
+  }
+
+  public void setAreCredentialsValid(Boolean areCredentialsValid) {
+    this.areCredentialsValid = areCredentialsValid;
   }
 
   public UserResponse googleUser(GoogleUserInfo googleUser) {
@@ -294,106 +413,6 @@ public class UserResponse {
     this.roles = roles;
   }
 
-  public UserResponse createdAt(OffsetDateTime createdAt) {
-    this.createdAt = createdAt;
-    return this;
-  }
-
-  /**
-   * The date and time the user was created
-   * @return createdAt
-  */
-  @Valid 
-  @Schema(name = "createdAt", description = "The date and time the user was created", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("createdAt")
-  public OffsetDateTime getCreatedAt() {
-    return createdAt;
-  }
-
-  public void setCreatedAt(OffsetDateTime createdAt) {
-    this.createdAt = createdAt;
-  }
-
-  public UserResponse updatedAt(OffsetDateTime updatedAt) {
-    this.updatedAt = updatedAt;
-    return this;
-  }
-
-  /**
-   * The date and time the user was last updated
-   * @return updatedAt
-  */
-  @Valid 
-  @Schema(name = "updatedAt", description = "The date and time the user was last updated", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("updatedAt")
-  public OffsetDateTime getUpdatedAt() {
-    return updatedAt;
-  }
-
-  public void setUpdatedAt(OffsetDateTime updatedAt) {
-    this.updatedAt = updatedAt;
-  }
-
-  public UserResponse isActive(Boolean isActive) {
-    this.isActive = isActive;
-    return this;
-  }
-
-  /**
-   * Indicates whether the user is active
-   * @return isActive
-  */
-  
-  @Schema(name = "isActive", description = "Indicates whether the user is active", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("isActive")
-  public Boolean getIsActive() {
-    return isActive;
-  }
-
-  public void setIsActive(Boolean isActive) {
-    this.isActive = isActive;
-  }
-
-  public UserResponse isSystemLock(Boolean isSystemLock) {
-    this.isSystemLock = isSystemLock;
-    return this;
-  }
-
-  /**
-   * Indicates whether the user's system lock is enabled
-   * @return isSystemLock
-  */
-  
-  @Schema(name = "isSystemLock", description = "Indicates whether the user's system lock is enabled", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("isSystemLock")
-  public Boolean getIsSystemLock() {
-    return isSystemLock;
-  }
-
-  public void setIsSystemLock(Boolean isSystemLock) {
-    this.isSystemLock = isSystemLock;
-  }
-
-  public UserResponse areCredentialsValid(Boolean areCredentialsValid) {
-    this.areCredentialsValid = areCredentialsValid;
-    return this;
-  }
-
-  /**
-   * Indicates whether the user's credentials are valid
-   * @return areCredentialsValid
-  */
-  
-  @Schema(name = "areCredentialsValid", description = "Indicates whether the user's credentials are valid", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-  @JsonProperty("areCredentialsValid")
-  public Boolean getAreCredentialsValid() {
-    return areCredentialsValid;
-  }
-
-  public void setAreCredentialsValid(Boolean areCredentialsValid) {
-    this.areCredentialsValid = areCredentialsValid;
-  }
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -409,21 +428,21 @@ public class UserResponse {
         Objects.equals(this.emailVerified, userResponse.emailVerified) &&
         Objects.equals(this.username, userResponse.username) &&
         Objects.equals(this.email, userResponse.email) &&
-        Objects.equals(this.googleUser, userResponse.googleUser) &&
-        Objects.equals(this.linkedinUser, userResponse.linkedinUser) &&
-        Objects.equals(this.twitterUser, userResponse.twitterUser) &&
-        Objects.equals(this.githubUser, userResponse.githubUser) &&
-        Objects.equals(this.roles, userResponse.roles) &&
         Objects.equals(this.createdAt, userResponse.createdAt) &&
         Objects.equals(this.updatedAt, userResponse.updatedAt) &&
         Objects.equals(this.isActive, userResponse.isActive) &&
         Objects.equals(this.isSystemLock, userResponse.isSystemLock) &&
-        Objects.equals(this.areCredentialsValid, userResponse.areCredentialsValid);
+        Objects.equals(this.areCredentialsValid, userResponse.areCredentialsValid) &&
+        Objects.equals(this.googleUser, userResponse.googleUser) &&
+        Objects.equals(this.linkedinUser, userResponse.linkedinUser) &&
+        Objects.equals(this.twitterUser, userResponse.twitterUser) &&
+        Objects.equals(this.githubUser, userResponse.githubUser) &&
+        Objects.equals(this.roles, userResponse.roles);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstName, lastName, emailVerified, username, email, googleUser, linkedinUser, twitterUser, githubUser, roles, createdAt, updatedAt, isActive, isSystemLock, areCredentialsValid);
+    return Objects.hash(id, firstName, lastName, emailVerified, username, email, createdAt, updatedAt, isActive, isSystemLock, areCredentialsValid, googleUser, linkedinUser, twitterUser, githubUser, roles);
   }
 
   @Override
@@ -436,16 +455,16 @@ public class UserResponse {
     sb.append("    emailVerified: ").append(toIndentedString(emailVerified)).append("\n");
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
-    sb.append("    googleUser: ").append(toIndentedString(googleUser)).append("\n");
-    sb.append("    linkedinUser: ").append(toIndentedString(linkedinUser)).append("\n");
-    sb.append("    twitterUser: ").append(toIndentedString(twitterUser)).append("\n");
-    sb.append("    githubUser: ").append(toIndentedString(githubUser)).append("\n");
-    sb.append("    roles: ").append(toIndentedString(roles)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
     sb.append("    isActive: ").append(toIndentedString(isActive)).append("\n");
     sb.append("    isSystemLock: ").append(toIndentedString(isSystemLock)).append("\n");
     sb.append("    areCredentialsValid: ").append(toIndentedString(areCredentialsValid)).append("\n");
+    sb.append("    googleUser: ").append(toIndentedString(googleUser)).append("\n");
+    sb.append("    linkedinUser: ").append(toIndentedString(linkedinUser)).append("\n");
+    sb.append("    twitterUser: ").append(toIndentedString(twitterUser)).append("\n");
+    sb.append("    githubUser: ").append(toIndentedString(githubUser)).append("\n");
+    sb.append("    roles: ").append(toIndentedString(roles)).append("\n");
     sb.append("}");
     return sb.toString();
   }
