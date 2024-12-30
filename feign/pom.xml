@@ -5,9 +5,11 @@
     <groupId>com.abdul.toolkit</groupId>
     <artifactId>toolkit</artifactId>
     <version>1.0.0</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>feign</artifactId>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>feign</name>

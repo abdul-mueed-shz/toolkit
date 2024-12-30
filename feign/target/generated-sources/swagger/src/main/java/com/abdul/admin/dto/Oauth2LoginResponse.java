@@ -19,7 +19,7 @@ import jakarta.annotation.Generated;
  * Oauth2LoginResponse
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-12-03T02:23:02.771685+05:00[Asia/Karachi]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-12-31T03:12:11.389933+05:00[Asia/Karachi]")
 public class Oauth2LoginResponse {
 
   private AuthenticationInfo tokenInfo;
