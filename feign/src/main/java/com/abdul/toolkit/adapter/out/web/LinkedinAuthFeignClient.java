@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "linkedinAuth", url = "${spring.security.oauth2.client.provider.linkedin.token-uri}")
+@FeignClient(name = "linkedinAuth", url = "${spring.security.oauth2.client.provider.linkedin.token-uri:''}")
 public interface LinkedinAuthFeignClient {
 
     @PostMapping

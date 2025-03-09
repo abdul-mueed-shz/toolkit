@@ -34,6 +34,31 @@
             </goals>
             <id>User.yaml</id>
           </execution>
+
+          <!-- Execution for sample.yaml -->
+          <execution>
+            <configuration>
+              <configOptions>
+                <dateLibrary>java8</dateLibrary>
+                <useJakartaEe>true</useJakartaEe>
+              </configOptions>
+              <generateApiDocumentation>false</generateApiDocumentation>
+              <generateApiTests>false</generateApiTests>
+              <generateApis>false</generateApis>
+              <generateModelDocumentation>false</generateModelDocumentation>
+              <generateModelTests>false</generateModelTests>
+              <generateModels>true</generateModels>
+              <generateSupportingFiles>false</generateSupportingFiles>
+              <generatorName>spring</generatorName>
+              <inputSpec>${project.basedir}/src/main/resources/swagger/Sample.yaml</inputSpec>
+              <modelPackage>dto.sample</modelPackage>
+              <output>${project.build.directory}/generated-sources/sample</output>
+            </configuration>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <id>Sample.yaml</id>
+          </execution>
         </executions>
         <groupId>org.openapitools</groupId>
         <version>${openapi-generator-maven-plugin-version}</version>
