@@ -1,6 +1,5 @@
 package com.abdul.toolkit.adapter.out.web;
 
-import com.abdul.admin.dto.LinkedinUserResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,5 +8,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface LinkedinUserInfoFeignClient {
 
     @GetMapping
-    LinkedinUserResponse getUserInfo(@RequestParam("oauth2_access_token") String token);
+    dto.user.LinkedinUserResponse getUserInfo(@RequestParam("oauth2_access_token") String token);
 }

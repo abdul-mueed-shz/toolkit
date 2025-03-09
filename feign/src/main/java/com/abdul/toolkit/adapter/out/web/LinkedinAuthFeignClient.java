@@ -1,6 +1,5 @@
 package com.abdul.toolkit.adapter.out.web;
 
-import com.abdul.admin.dto.AccessToken;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface LinkedinAuthFeignClient {
 
     @PostMapping
-    AccessToken getAccessToken(
+    dto.user.AccessToken getAccessToken(
             @RequestParam("grant_type") String grantType,
             @RequestParam("code") String code,
             @RequestParam("redirect_uri") String redirectUri,
