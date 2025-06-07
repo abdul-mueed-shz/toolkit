@@ -22,7 +22,7 @@ import jakarta.annotation.Generated;
  * RoleInfo
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-12-31T03:12:11.389933+05:00[Asia/Karachi]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-08T02:16:09.747510+05:00[Asia/Karachi]")
 public class RoleInfo {
 
   private Long id;

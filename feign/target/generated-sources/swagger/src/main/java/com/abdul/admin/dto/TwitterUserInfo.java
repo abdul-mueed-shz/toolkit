@@ -18,7 +18,7 @@ import jakarta.annotation.Generated;
  * TwitterUserInfo
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2024-12-31T03:12:11.389933+05:00[Asia/Karachi]")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2025-06-08T02:16:09.747510+05:00[Asia/Karachi]")
 public class TwitterUserInfo {
 
   private Long id;
