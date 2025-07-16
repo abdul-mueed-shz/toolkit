@@ -1,93 +1,120 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.abdul.toolkit</groupId>
-    <artifactId>toolkit</artifactId>
-    <version>1.0.0</version>
-    <relativePath>../pom.xml</relativePath>
-  </parent>
-
   <artifactId>feign</artifactId>
-  <version>1.0.0</version>
-  <packaging>jar</packaging>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+      </plugin>
+      <plugin>
+        <artifactId>openapi-generator-maven-plugin</artifactId>
+        <executions>
+          <!-- Execution for User.yaml -->
+          <execution>
+            <configuration>
+              <configOptions>
+                <dateLibrary>java8</dateLibrary>
+                <useJakartaEe>true</useJakartaEe>
+              </configOptions>
+              <generateApiDocumentation>false</generateApiDocumentation>
+              <generateApiTests>false</generateApiTests>
+              <generateApis>false</generateApis>
+              <generateModelDocumentation>false</generateModelDocumentation>
+              <generateModelTests>false</generateModelTests>
+              <generateModels>true</generateModels>
+              <generateSupportingFiles>false</generateSupportingFiles>
+              <generatorName>spring</generatorName>
+              <inputSpec>${project.basedir}/src/main/resources/swagger/User.yaml</inputSpec>
+              <modelPackage>dto.user</modelPackage>
+              <output>${project.build.directory}/generated-sources/user</output>
+            </configuration>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <id>User.yaml</id>
+          </execution>
 
-  <name>feign</name>
-  <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <openapi-generator-maven-plugin-version>7.0.1
-    </openapi-generator-maven-plugin-version> <!-- Latest version of OpenAPI Generator plugin -->
-  </properties>
+          <!-- Execution for sample.yaml -->
+          <execution>
+            <configuration>
+              <configOptions>
+                <dateLibrary>java8</dateLibrary>
+                <useJakartaEe>true</useJakartaEe>
+              </configOptions>
+              <generateApiDocumentation>false</generateApiDocumentation>
+              <generateApiTests>false</generateApiTests>
+              <generateApis>false</generateApis>
+              <generateModelDocumentation>false</generateModelDocumentation>
+              <generateModelTests>false</generateModelTests>
+              <generateModels>true</generateModels>
+              <generateSupportingFiles>false</generateSupportingFiles>
+              <generatorName>spring</generatorName>
+              <inputSpec>${project.basedir}/src/main/resources/swagger/Sample.yaml</inputSpec>
+              <modelPackage>dto.sample</modelPackage>
+              <output>${project.build.directory}/generated-sources/sample</output>
+            </configuration>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <id>Sample.yaml</id>
+          </execution>
+        </executions>
+        <groupId>org.openapitools</groupId>
+        <version>${openapi-generator-maven-plugin-version}</version>
+      </plugin>
+    </plugins>
+  </build>
 
   <dependencies>
 
     <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-openfeign</artifactId>
+      <groupId>org.springframework.cloud</groupId>
       <version>4.1.4</version>
     </dependency>
 
 
     <dependency>
-      <groupId>jakarta.annotation</groupId>
       <artifactId>jakarta.annotation-api</artifactId>
+      <groupId>jakarta.annotation</groupId>
       <version>3.0.0</version>
     </dependency>
 
     <dependency>
-      <groupId>io.swagger.core.v3</groupId>
       <artifactId>swagger-core-jakarta</artifactId>
+      <groupId>io.swagger.core.v3</groupId>
       <version>2.2.7</version>
     </dependency>
 
     <dependency>
-      <groupId>org.openapitools</groupId>
       <artifactId>jackson-databind-nullable</artifactId>
+      <groupId>org.openapitools</groupId>
       <version>0.2.2</version>
     </dependency>
 
   </dependencies>
+  <modelVersion>4.0.0</modelVersion>
+  <name>feign</name>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.openapitools</groupId>
-        <artifactId>openapi-generator-maven-plugin</artifactId>
-        <version>${openapi-generator-maven-plugin-version}</version>
-        <executions>
-          <execution>
-            <id>User.yaml</id>
-            <goals>
-              <goal>generate</goal>
-            </goals>
-            <configuration>
-              <inputSpec>${project.basedir}/src/main/resources/swagger/User.yaml</inputSpec>
-              <output>${project.build.directory}/generated-sources/swagger</output>
-              <generatorName>spring</generatorName>
-              <configOptions>
-                <dateLibrary>java8</dateLibrary>
-                <useJakartaEe>true</useJakartaEe>
-              </configOptions>
-              <generateApis>false</generateApis>
-              <generateApiTests>false</generateApiTests>
-              <generateApiDocumentation>false</generateApiDocumentation>
-              <generateModels>true</generateModels>
-              <generateModelTests>false</generateModelTests>
-              <generateModelDocumentation>false</generateModelDocumentation>
-              <modelPackage>com.abdul.admin.dto</modelPackage>
-              <generateSupportingFiles>false</generateSupportingFiles>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+  <packaging>jar</packaging>
+  <parent>
+    <artifactId>toolkit</artifactId>
+    <groupId>com.abdul.toolkit</groupId>
+    <relativePath>../pom.xml</relativePath>
+    <version>1.0.0</version>
+  </parent>
+
+  <properties>
+    <openapi-generator-maven-plugin-version>7.0.1
+    </openapi-generator-maven-plugin-version>
+    <project.build.sourceEncoding>UTF-8
+    </project.build.sourceEncoding> <!-- Latest version of OpenAPI Generator plugin -->
+  </properties>
+
+  <url>http://maven.apache.org</url>
+
+  <version>1.0.0</version>
 
 </project>
