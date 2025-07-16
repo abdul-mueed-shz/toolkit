@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class GenerateJwtTokenUseCaseImpl implements GenerateJwtTokenUseCase {
 
-    @Value("${app.jwt.token-validity}")
+    @Value("${app.jwt.token-validity:1}")
     private Integer tokenValidity;
 
     private final GetSignInKeyUseCase getSignInKeyUseCase;

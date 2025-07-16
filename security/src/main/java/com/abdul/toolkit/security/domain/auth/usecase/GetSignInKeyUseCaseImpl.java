@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class GetSignInKeyUseCaseImpl implements GetSignInKeyUseCase {
 
-    @Value("${app.jwt.secret-key}}")
+    @Value("${app.jwt.secret-key:defaultSecretValue}")
     private String secretKey;
 
     public SecretKey get() {
